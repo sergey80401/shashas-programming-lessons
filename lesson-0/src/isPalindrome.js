@@ -5,7 +5,7 @@
 // А слова: Саша Кожухов, программирование, JavaScript - нет
 
 function isPalindrome(str) {
-    // ЗДЕСЬ ТВОЙ КОД
-  }
-  
-  module.exports = isPalindrome
+  // ЗДЕСЬ ТВОЙ КОД
+}
+
+module.exports = isPalindrome // На это можно пока что не обращать внимания, это просто экспорт функции, чтобы тесты работали
