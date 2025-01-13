@@ -3,9 +3,11 @@
 // Палиндром это такая интересная строка, которая ровно по её середине "отражается"
 // Например строки: кек, лол, шалаш, 12321, 1234554321 - паллиндромы
 // А слова: Саша Кожухов, программирование, JavaScript - нет
+const isPalindrome = (str) => {
 
-function isPalindrome(str) {
-  // ЗДЕСЬ ТВОЙ КОД
-}
+  const cleanedStr = str.replace(/[^a-zA-Zа-яА-Я0-9]/g, '').toLowerCase();
+
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+};
 
 module.exports = isPalindrome // На это можно пока что не обращать внимания, это просто экспорт функции, чтобы тесты работали
