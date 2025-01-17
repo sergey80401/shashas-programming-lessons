@@ -11,8 +11,26 @@
 
 //var str = "этот текст написан.но не очень. здесь вообще пробел";
 
-const normalizeText = (str) => {
-  // ЗДЕСЬ ТВОЙ КОД
+const normalizeText = (text) => {
+
+  text = text.replace(/([,.?])/g, '$1 ');
+
+  text = text.replace(/\s+/g, ' ').trim();
+
+  
+  text = text.split(/([.!?]\s*)/).map((sentence, index, array) => {
+    if (index === 0 || array[index - 1].match(/[.!?]\s*$/)) {
+      return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    }
+    return sentence;
+  }).join('');
+
+  
+  if (!text.endsWith('.')) {
+    text += '.';
+  }
+
+  return text;
 };
 
 module.exports = normalizeText;

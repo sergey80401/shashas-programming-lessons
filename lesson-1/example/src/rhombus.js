@@ -30,7 +30,24 @@
 // ]
 
 const rhombus = (n) => {
-  // ЗДЕСЬ ТВОЙ КОД
+  const result = [];
+  const mid = Math.floor((n - 1) / 2); 
+
+  for (let i = 0; i < n; i++) {
+    const spaces = Math.abs(mid - i); 
+    const zeros = n - 2 * spaces;   
+
+    
+    const row = [
+      ...Array(spaces).fill(" "),    
+      ...Array(zeros).fill("0"),     
+      ...Array(spaces).fill(" ")    
+    ];
+
+    result.push(row);
+  }
+
+  return result;
 };
 
 module.exports = rhombus;

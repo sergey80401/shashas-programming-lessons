@@ -8,7 +8,19 @@
 // Результат выполнения функции: " нравится "
 
 const largestCommonSubstring = (str1, str2) => {
-  // ЗДЕСЬ ТВОЙ КОД
+  let maxSubstring = ""; 
+
+  for (let i = 0; i < str1.length; i++) {
+    for (let j = i + 1; j <= str1.length; j++) {
+      const substring = str1.slice(i, j); 
+      
+      if (str2.includes(substring) && substring.length > maxSubstring.length) {
+        maxSubstring = substring; 
+      }
+    }
+  }
+
+  return maxSubstring;
 };
 
 module.exports = largestCommonSubstring;
