@@ -18,3 +18,11 @@ jobs:
       run: cd ./lesson-1/example && npm install
     - name: Run tests
       run: cd ./lesson-1/example && npm run test
+  lesson-1-tests:  
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: cd ./lesson-1 && npm install
+      - name: Run tests
+        run: cd ./lesson-1 && npm test
