@@ -1,4 +1,3 @@
 # shashas-programming-lessons
-This is a repository for Sasha to learn programming
 
-!!!
+This is a repository for Sasha to learn programming
